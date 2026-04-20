@@ -4,6 +4,8 @@ const news = () => {
   return (
     <div>
       try catch
+      new aded 
+
     </div>
   )
 }
