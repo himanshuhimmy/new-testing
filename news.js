@@ -3,7 +3,7 @@ import React from 'react'
 const news = () => {
   return (
     <div>
-      try
+      try catch
     </div>
   )
 }
