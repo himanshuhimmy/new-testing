@@ -1,11 +1,11 @@
 import React from 'react'
 
-const news = () => {
+const sushil = () => {
   return (
     <div>
-      try catch
+      aaa
     </div>
   )
 }
 
-export default news
+export default sushil
