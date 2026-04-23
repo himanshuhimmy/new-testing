@@ -1,13 +1,16 @@
 
 
 import SumsP from './SumsP';
+import TimerComp from './TimerComp';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       
-   <SumsP/>
+   {/* <SumsP/> */}
+   <TimerComp/>
       </header>
     </div>
   );
