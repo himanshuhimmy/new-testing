@@ -1,6 +1,7 @@
 
 
 import Debounse from './Debounse';
+import DummyData from './DummyData';
 import SumsP from './SumsP';
 import TimerComp from './TimerComp';
 
@@ -12,7 +13,8 @@ function App() {
       
    {/* <SumsP/> */}
    {/* <TimerComp/> */}
-   <Debounse/>
+   {/* <Debounse/> */}
+<DummyData/>
       </header>
     </div>
   );
