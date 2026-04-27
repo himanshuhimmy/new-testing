@@ -1,21 +1,21 @@
-
-
-import Debounse from './Debounse';
-import DummyData from './DummyData';
-import SumsP from './SumsP';
-import TimerComp from './TimerComp';
-
+import Debounse from "./Debounse";
+import DummyData from "./DummyData";
+import StringQuestions from "./string types/StringQuestions";
+import SumsP from "./SumsP";
+import Test from "./Test";
+import TimerComp from "./TimerComp";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      
-   {/* <SumsP/> */}
-   {/* <TimerComp/> */}
-   {/* <Debounse/> */}
-<DummyData/>
+        {/* <SumsP/> */}
+        {/* <TimerComp/> */}
+        {/* <Debounse/> */}
+        {/* <DummyData/> */}
+        {/* <Test /> */}
       </header>
+      <StringQuestions />
     </div>
   );
 }

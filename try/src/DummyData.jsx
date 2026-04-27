@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios";
+import PracticeSums from './PracticeSums';
 const DummyData = () => {
 let [button,setButton]=useState(false)
 let [data,setData]=useState(null)
@@ -27,7 +28,7 @@ try {
 <button disabled={button} onClick={fetchApi} >Fetch Data</button>     
 
 {error && <p className="text-red-500">{error}</p>}
-
+<PracticeSums/>
 { data !== null &&  <>  {data?.name} {data?.email} </>}
     </div>
   )
