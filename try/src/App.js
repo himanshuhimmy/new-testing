@@ -1,3 +1,4 @@
+import Arraytypes from "./arraytypes/Arraytypes";
 import Debounse from "./Debounse";
 import DummyData from "./DummyData";
 import StringQuestions from "./string types/StringQuestions";
@@ -14,8 +15,9 @@ function App() {
         {/* <Debounse/> */}
         {/* <DummyData/> */}
         {/* <Test /> */}
+        <Arraytypes />
       </header>
-      <StringQuestions />
+      {/* <StringQuestions /> */}
     </div>
   );
 }

@@ -130,6 +130,37 @@ const StringQuestions = () => {
   }
   // findSum([2, 7, 11, 15], 13);
 
+  // !  Longest Palindromic Substring
+
+  function longestPalindrome(p) {
+    let longest = "";
+
+    function expand(left, right) {
+      while (
+        left >= 0 &&
+        right < p.length &&
+        p.charAt(left) === p.charAt(right)
+      ) {
+        left--;
+        right++;
+      }
+      let current = p.slice(left + 1, right);
+      if (current.length > longest.length) {
+        longest = current;
+      }
+    }
+
+    for (let i = 0; i < p.length; i++) {
+      expand(i, i);
+      expand(i, i + 1);
+    }
+
+    return console.log(longest);
+  }
+
+  longestPalindrome("cbbd"); // "bb"
+  longestPalindrome("babad"); // "bab"
+
   return (
     <div>
       <April />
