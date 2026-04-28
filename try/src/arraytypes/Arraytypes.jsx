@@ -95,6 +95,22 @@ const Arraytypes = () => {
   }
   SortK([1, 2, 3, 4, 5, 6, 7], 3);
 
+  //! flat array without flat
+  function withoutFlat(a) {
+    let flatArray = [];
+
+    a.map((num) => {
+      if (Array.isArray(num)) {
+        flatArray = flatArray.concat(withoutFlat(num));
+      } else {
+        flatArray.push(num);
+      }
+    });
+
+    return flatArray;
+  }
+  console.log(withoutFlat([1, [2, [3, [4]]]]));
+
   return <div>array</div>;
 };
 
