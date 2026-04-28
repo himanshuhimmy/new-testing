@@ -79,24 +79,44 @@ const StringQuestions = () => {
 
   // ! Given a string, find the length of the longest substring without repeating characters.
 
+  // ? claude this one ignore
+  // function longestSubstring(a) {
+  //   let start = 0;
+  //   let maxLength = 0;
+  //   let seen = {};
+
+  //   for (let end = 0; end < a.length; end++) {
+  //     let char = a.charAt(end);
+
+  //     if (seen[char] !== undefined && seen[char] >= start) {
+  //       start = seen[char] + 1;
+  //     }
+  //     seen[char] = end;
+  //     maxLength = Math.max(maxLength, end - start + 1);
+  //   }
+
+  //   return console.log(maxLength);
+  // }
+  // longestSubstring("pwwkew");
+
+  // TODO: gemeini prefr this code
   function longestSubstring(a) {
-    let start = 0;
     let maxLength = 0;
-    let seen = {};
 
-    for (let end = 0; end < a.length; end++) {
-      let char = a.charAt(end);
-
-      if (seen[char] !== undefined && seen[char] >= start) {
-        start = seen[char] + 1;
+    for (let i = 0; i < a.length; i++) {
+      let current = "";
+      for (var j = i + 1; j < a.length; j++) {
+        if (current.includes(a[j])) {
+          break;
+        }
+        current += a[j];
       }
-      seen[char] = end;
-      maxLength = Math.max(maxLength, end - start + 1);
+      maxLength = Math.max(current.length, maxLength);
     }
 
     return console.log(maxLength);
   }
-  // longestSubstring("pwwkew");
+  longestSubstring("pwwkew");
 
   // ! Given an array of strings, group the anagrams together.
 
