@@ -151,6 +151,7 @@ const StringQuestions = () => {
   // findSum([2, 7, 11, 15], 13);
 
   // !  Longest Palindromic Substring
+  // ** cant understand
 
   function longestPalindrome(p) {
     let longest = "";
@@ -180,6 +181,38 @@ const StringQuestions = () => {
 
   longestPalindrome("cbbd"); // "bb"
   longestPalindrome("babad"); // "bab"
+
+  // ! second most occuring char
+
+  function secondMost(a) {
+    let letter = {};
+
+    for (var i = 0; i < a.length; i++) {
+      let char = a.charAt(i);
+
+      if (letter[char] === undefined) {
+        letter[char] = 1;
+      } else {
+        letter[char]++;
+      }
+    }
+
+    let first = 0;
+    let second = 0;
+    let secondChar = "";
+
+    for (let word in letter) {
+      if (letter[word] > first) {
+        second = first;
+        first = letter[word];
+      } else if (letter[word] > second) {
+        second = letter[word];
+        secondChar = word;
+      }
+    }
+    console.log(secondChar);
+  }
+  secondMost("aaabbc");
 
   return (
     <div>
